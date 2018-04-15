@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".portrait_secondscreen"></activity>
+        <activity android:name=".Portrait_second_screen"></activity>
     </application>
 
 </manifest>
