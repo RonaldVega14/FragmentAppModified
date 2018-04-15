@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FragmentApp</string>
 
-    <string-array name="Planets">
+    <string-array name="Planetes">
         <item>Sun</item>
         <item>Mercury</item>
         <item>Venus</item>

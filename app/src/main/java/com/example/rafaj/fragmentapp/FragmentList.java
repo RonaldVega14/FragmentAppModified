@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 public class FragmentList extends ListFragment implements AdapterView.OnItemClickListener{
 
+    private Planete planetes[] = new Planete[9];
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,7 +33,7 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
 
         super.onActivityCreated(savedInstanceState);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(getActivity(),
-                R.array.Planets, android.R.layout.simple_list_item_1);
+                R.array.Planetes, android.R.layout.simple_list_item_1);
         //busca en values/string.xml ese array
         setListAdapter(adapter);
         getListView().setOnItemClickListener(this);
