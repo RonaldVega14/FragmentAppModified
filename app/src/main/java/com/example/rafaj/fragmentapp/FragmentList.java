@@ -23,6 +23,16 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        planetes[0] = new Planete("Sun",R.drawable.sun);
+        planetes[1] = new Planete("Mercury",R.drawable.mercury);
+        planetes[2] = new Planete("Venus",R.drawable.venus);
+        planetes[3] = new Planete("Earth",R.drawable.earth);
+        planetes[4] = new Planete("Mars",R.drawable.mars);
+        planetes[5] = new Planete("Jupiter",R.drawable.jupiter);
+        planetes[6] = new Planete("Saturn",R.drawable.saturn);
+        planetes[7] = new Planete("Uranus",R.drawable.uranus);
+        planetes[8] = new Planete("Neptune",R.drawable.neptune);
+
         View view = inflater.inflate(R.layout.list_fragment, container, false);
         return view;
     }
@@ -47,7 +57,7 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
 
             Bundle bungalo= new Bundle();
-            bungalo.putString("KEY", adapterView.getItemAtPosition(i).toString());
+            bungalo.putParcelable("KEY",planetes[i]);
 
 
             Intent newIntent = new Intent(getActivity().getApplicationContext(), Portrait_second_screen.class);
@@ -57,7 +67,8 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
             Toast.makeText(getActivity(), "Item: " + adapterView.getItemAtPosition(i).toString(), Toast.LENGTH_SHORT).show();
 
             Bundle bundle = new Bundle();
-            bundle.putString("KEY", adapterView.getItemAtPosition(i).toString());
+            bundle.putParcelable("KEY",planetes[i]);
+
             FragmentViewer frag = new FragmentViewer();
             frag.setArguments(bundle);
 
