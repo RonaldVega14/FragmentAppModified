@@ -3,17 +3,15 @@ package com.example.rafaj.fragmentapp;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Main2Activity extends AppCompatActivity {
-    Fragment fag;
+public class portrait_secondscreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.portrait_secondscreen);
 
         Intent callingIntent = getIntent();
         String intentAction = callingIntent.getAction();

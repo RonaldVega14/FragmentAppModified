@@ -49,7 +49,7 @@ public class FragmentList extends ListFragment implements AdapterView.OnItemClic
             bungalo.putString("KEY", adapterView.getItemAtPosition(i).toString());
 
 
-            Intent newIntent = new Intent(getActivity().getApplicationContext(), Main2Activity.class);
+            Intent newIntent = new Intent(getActivity().getApplicationContext(), portrait_secondscreen.class);
             newIntent.putExtras(bungalo);
             startActivity(newIntent);
         }else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
