@@ -25,10 +25,9 @@ public class Portrait_second_screen extends AppCompatActivity {
         Intent callingIntent = getIntent();
         String intentAction = callingIntent.getAction();
         String intentType = callingIntent.getType();
+        
+        handleReceivedText(callingIntent);
 
-        if (Intent.ACTION_SEND.equals(intentAction)){
-            handleReceivedText(callingIntent);
-        }
 
     }
 
